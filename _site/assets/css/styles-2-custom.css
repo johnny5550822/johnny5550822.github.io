@@ -12,7 +12,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #545E6C;
   background: #f5f5f5;
-  font-size: 14px;
+  font-size: 16px;
   padding: 30px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -64,7 +64,7 @@ p {
   color: #fff;
 }
 .sidebar-wrapper .profile-container {
-  padding: 30px;
+  padding: 20px;
   background: rgba(0, 0, 0, 0.2);
   text-align: center;
   color: #fff;
@@ -100,7 +100,7 @@ p {
   font-size: 14px;
 }
 .sidebar-wrapper .container-block {
-  padding: 30px;
+  padding: 20px;
 }
 .sidebar-wrapper .container-block-title {
   text-transform: uppercase;
@@ -110,7 +110,7 @@ p {
   margin-bottom: 15px;
 }
 .sidebar-wrapper .degree {
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 0;
   margin-bottom: 5px;
 }

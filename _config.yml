@@ -5,7 +5,7 @@ url: 'http://johnny5550822.github.io/'
 
 
 # Enable one of these styles by removing #. Style will be applied only after restarting the build or serve.
-style: styles-2
+style: styles-2-custom #desgined by Johnny, 01/01/2017
 #style: styles-3
 #style: styles-4
 #style: styles-5

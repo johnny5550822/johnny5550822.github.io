@@ -11,17 +11,17 @@ I am passionate about machine learning and deep learning. I love exciting projec
     <tr>
         <th>
             <a href="https://twitter.com/{{ site.twitter_username }}">
-                <i class="fa fa-twitter"></i> Twitter
+                <i class="fa fa-twitter"></i> Twitter 
             </a>
         </th>
         <th>
             <a href="https://github.com/{{ site.github_username }}">
-                <i class="fa fa-github"></i> GitHub
+                <i class="fa fa-github"></i> GitHub 
             </a>
         </th>
         <th>
             <a href="https://linkedin.com/in/{{ site.linkedin_username }}">
-                <i class="fa fa-linkedin"></i> LinkedIn
+                <i class="fa fa-linkedin"></i> LinkedIn 
             </a>
         </th>
     </tr>

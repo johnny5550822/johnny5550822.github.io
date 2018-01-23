@@ -6,24 +6,19 @@ body {
 text-align: justify
 }
 
+img {
+    border-radius: 100%;
+    margin: auto;
+    width: 20%;
+    margin-bottom: 10px;
+}
+
 .container {
   max-width: 38rem;
   padding-left:  1.5rem;
   padding-right: 1.5rem;
   margin-left:  auto;
   margin-right: auto;
-}
-
-.left{
-    text-align: left;
-}
-
-.center{
-    text-align: center;
-}
-
-.right{
-    text-align: right;
 }
 
 footer {

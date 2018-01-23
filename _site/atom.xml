@@ -4,7 +4,7 @@
  <title>Johnny Ho</title>
  <link href="http://johnny5550822.github.com/atom.xml" rel="self"/>
  <link href="http://johnny5550822.github.com/"/>
- <updated>2018-01-22T20:03:46-08:00</updated>
+ <updated>2018-01-22T20:32:48-08:00</updated>
  <id>http://johnny5550822.github.com</id>
  <author>
    <name>King Chung (Johnny) Ho</name>
@@ -43,6 +43,25 @@
 
 &lt;hr /&gt;
 
+&lt;h5 id=&quot;selected-presentation-and-publications&quot;&gt;Selected Presentation and Publications&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ho KC, et al. A deep learning approach for acute ischemic stroke tissue outcome prediction. 2018, in preparation&lt;/li&gt;
+  &lt;li&gt;Li J, Speier W, Ho KC, et al. An EM-based semi-supervised deep learning approach for semantic segmentation of histopathological images from radical prostatectomies. 2018, in preparation&lt;/li&gt;
+  &lt;li&gt;Ho KC, et al. Classifying Acute Ischemic Stroke Onset Time using Deep Imaging Features. In AMIA Annual
+Symposium Proceedings (Vol. 2017). &lt;strong&gt;Best student paper award&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Ho KC, et al. A Temporal Deep Learning Approach for MR Perfusion Parameter Estimation in Stroke. 23rd
+International Conference on Pattern Recognition. Cancun; 2016. Oral presentation. &lt;strong&gt;Finalist on IBM best student paper award&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Ho KC, et al. Predicting Discharge Mortality after Acute Ischemic Stroke Using Balanced Data. In AMIA
+Annual Symposium Proceedings (Vol. 2014, p. 1787). &lt;strong&gt;Finalist on best student paper award&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Ho KC, et al. A Novel Bi-Input Convolutional Neural Network for Deconvolution-Free Estimation of Stroke
+MR Perfusion Parameters. 2016 Annual Meeting of the Radiological Society of North America. Chicago, IL; 2016. Oral
+presentation&lt;/li&gt;
+  &lt;li&gt;Ho KC, et al. Predicting Acute Ischemic Stroke Tissue Fate using Deep Learning on Source Perfusion MRI
+International Stroke Conference (ISC) 2016. Poster presentation.&lt;/li&gt;
+  &lt;li&gt;Sarma KV, Zhong X, Ho KC, et al. An Investigational Patch-based Convolutional Neural Network Model for the
+Detection of Clinically Significant Prostate Cancer using Multiparametric MRI. 2016 Annual Meeting of the
+Radiological Society of North America. Chicago, IL; 2016. Oral presentation&lt;/li&gt;
+&lt;/ul&gt;
 </content>
  </entry>
  

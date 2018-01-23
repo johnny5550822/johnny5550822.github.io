@@ -25,6 +25,11 @@ author:
 version:             2.0.0
 github:              johnny5550822
 
+# social media
+twitter_username:     kingchungho
+github_username:      johnny5550822
+linkedin_username:    kingchungho
+
 # Gems
 gems:
   - jekyll-paginate

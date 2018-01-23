@@ -1,28 +1,32 @@
+# Permalinks
+permalink:           pretty
 
-title: Johnny Ho
-url: 'http://johnny5550822.github.io/'
-#baseurl: '/' #change it according to your repository name
+# Setup
+title:               Johnny Ho
+tagline:             PhD candidate in imaging informatics
+url:                 http://johnny5550822.github.com
+paginate:            1
+baseurl:             ""
 
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
 
-# Enable one of these styles by removing #. Style will be applied only after restarting the build or serve.
-style: styles-2-custom #desgined by Johnny, 01/01/2017
-#style: styles-3
-#style: styles-4
-#style: styles-5
-#style: styles-6
+# About/contact
+author:
+  name:              King Chung (Johnny) Ho
+  url:               http://johnny5550822.github.com
+  email:             johnny5550822@g.ucla.edu
 
+# Custom vars
+version:             2.0.0
+github:              johnny5550822
+  repo:              https://github.com/johnny5550822
 
-#Profile information
-name: King Chung (Johnny) Ho
-tagline: PhD Candidate
-pic: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
-
-#sidebar links
-email: johnny5550822@g.ucla.edu
-phone: 
-website: johnny5550822.github.io/
-linkedin: kingchungho
-github: johnny5550822
-twitter: 'KingChungHo'
-
-#Update all the sections by editing the files inside _includes folder.
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist

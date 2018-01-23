@@ -29,13 +29,13 @@ I am passionate about machine learning and deep learning. I love exciting projec
 
 -----
 
-##### Selected Presentation and Publications
+##### Selected Presentations and Publications
 * Ho KC, et al. A deep learning approach for acute ischemic stroke tissue outcome prediction. 2018, in preparation
 * Li J, Speier W, Ho KC, et al. An EM-based semi-supervised deep learning approach for semantic segmentation of histopathological images from radical prostatectomies. 2018, in preparation
 * Ho KC, et al. Classifying Acute Ischemic Stroke Onset Time using Deep Imaging Features. In AMIA Annual
 Symposium Proceedings (Vol. 2017). **Best student paper award**
 * Ho KC, et al. A Temporal Deep Learning Approach for MR Perfusion Parameter Estimation in Stroke. 23rd
-International Conference on Pattern Recognition. Cancun; 2016. Oral presentation. **Finalist on IBM best student paper award**
+International Conference on Pattern Recognition. Cancun; 2016. **Finalist on IBM best student paper award**
 * Ho KC, et al. Predicting Discharge Mortality after Acute Ischemic Stroke Using Balanced Data. In AMIA
 Annual Symposium Proceedings (Vol. 2014, p. 1787). **Finalist on best student paper award**
 * Ho KC, et al. A Novel Bi-Input Convolutional Neural Network for Deconvolution-Free Estimation of Stroke

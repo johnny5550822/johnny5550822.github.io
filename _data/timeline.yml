@@ -1,0 +1,21 @@
+# Edit these short entries to refine the homepage timeline.
+# Keep dates and descriptions factual; the order shown here is the display order.
+- period: "2026 — now"
+  title: "Senior Principal AI/ML Engineer"
+  organization: "Edwards Lifesciences"
+  description: "Building applied AI systems for healthcare and medical imaging."
+
+- period: "Previously"
+  title: "AI and digital health research"
+  organization: "Verily"
+  description: "Worked on machine learning and digital biomarkers, including wearable measures for Parkinson's disease."
+
+- period: "2013 — 2019"
+  title: "Ph.D."
+  organization: "University of California, Los Angeles"
+  description: "Doctoral research at the intersection of imaging informatics and machine learning."
+
+- period: "Ongoing"
+  title: "Independent research & side projects"
+  organization: "Team LittleStar"
+  description: "Exploring reinforcement learning, search, and opponent modeling through competitive Pokémon agents."

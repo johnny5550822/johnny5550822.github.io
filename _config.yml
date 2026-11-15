@@ -1,36 +1,26 @@
-# Permalinks
-permalink:           pretty
-
-# Setup
-title:               Johnny Ho
-tagline:             PhD candidate in imaging informatics
-url:                 http://johnny5550822.github.com
-paginate:            1
-baseurl:             ""
-
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
-
-# About/contact
-author:
-  name:              King Chung (Johnny) Ho
-  url:               http://johnny5550822.github.com
-  email:             johnny5550822@g.ucla.edu
-
-# Custom vars
-version:             2.0.0
-github:              johnny5550822
-
-# social media
-twitter_username:     kingchungho
-github_username:      johnny5550822
-linkedin_username:    kingchungho
-
-# Gems
-gems:
-  - jekyll-paginate
-  - jekyll-gist
+title: "King Chung (Johnny) Ho"
+description: "Applied machine learning, research, and notes on building intelligent systems."
+url: "https://johnny5550822.github.io"
+baseurl: ""
+lang: "en"
+timezone: "America/Los_Angeles"
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:title/
+exclude:
+  - README.md
+  - LICENSE.md
+  - .sass-cache
+  - _site
+  - about.md
+  - atom.xml
+  - css
+  - styles.scss
+  - public
+  - _posts/2016-01-03-introduction.md
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

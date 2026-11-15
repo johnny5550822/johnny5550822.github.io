@@ -1,0 +1,12 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{ '/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/blog/' | absolute_url }}</loc></url>
+  {% assign published_posts = site.posts | where: 'site_post', true %}{% for post in published_posts %}
+  <url><loc>{{ post.url | absolute_url }}</loc><lastmod>{{ post.date | date: '%Y-%m-%d' }}</lastmod></url>
+  {% endfor %}
+</urlset>

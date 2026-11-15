@@ -1,13 +1,70 @@
 ---
 layout: default
-title: Home
+permalink: /
+description: "King Chung (Johnny) Ho — applied machine learning engineer and researcher. Research, publications, and technical writing."
 ---
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-label"><span class="status-dot" aria-hidden="true"></span> APPLIED ML · RESEARCH · ENGINEERING</div>
+  <h1 id="hero-title">Hi, I'm <span class="headline-accent">Johnny.</span></h1>
+  <p class="hero-deck">I build intelligent systems and study how they learn.</p>
+  <p class="hero-copy">I'm King Chung (Johnny) Ho, Ph.D., an applied machine learning engineer and researcher. My interests span AI for healthcare, reinforcement learning, search, and autonomous agents. This is a small home for the things I build and learn.</p>
+  <div class="social-links" aria-label="Find me online">
+    <a href="https://scholar.google.com/citations?user=7VJYOzUAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+    <a href="https://www.linkedin.com/in/kingchungho" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+    <a href="https://github.com/johnny5550822" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    <a href="mailto:johnny5550822@gmail.com">Email <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
-    {{ post.content }}
-  </article>
-  {% endfor %}
-</div>
+<section id="timeline" class="section" aria-labelledby="timeline-title">
+  <div class="section-heading">
+    <div><p class="section-kicker">01 / A LITTLE ABOUT ME</p><h2 id="timeline-title">A short timeline</h2></div>
+    <p>Just the highlights.</p>
+  </div>
+  <div class="timeline">
+    {% for item in site.data.timeline %}
+    <div class="timeline-item">
+      <div class="timeline-period">{{ item.period }}</div>
+      <div class="timeline-body">
+        <h3>{{ item.title | escape }}</h3>
+        <p class="timeline-org">{{ item.organization | escape }}</p>
+        <p class="timeline-desc">{{ item.description | escape }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
 
+<section id="publications" class="section" aria-labelledby="publications-title">
+  <div class="section-heading">
+    <div><p class="section-kicker">02 / RESEARCH</p><h2 id="publications-title">Selected publications</h2></div>
+    <a class="section-action" href="https://scholar.google.com/citations?user=7VJYOzUAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">All publications ↗</a>
+  </div>
+  <div class="publication-list">
+    {% for paper in site.data.publications %}
+    <a class="publication" href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">
+      <span class="pub-year">{{ paper.year }}</span>
+      <span class="pub-content"><span class="pub-title">{{ paper.title | escape }}</span><span class="pub-venue">{{ paper.venue | escape }}{% if paper.note %} <span class="pub-note">· {{ paper.note | escape }}</span>{% endif %}</span></span>
+      <span class="item-arrow" aria-hidden="true">↗</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="writing" class="section section-writing" aria-labelledby="writing-title">
+  <div class="section-heading">
+    <div><p class="section-kicker">03 / FIELD NOTES</p><h2 id="writing-title">Writing</h2></div>
+    <a class="section-action" href="{{ '/blog/' | relative_url }}">All posts →</a>
+  </div>
+  <p class="section-intro">Side projects, experiments, technical rabbit holes, and lessons worth keeping.</p>
+  {% assign published_posts = site.posts | where: 'site_post', true %}
+  <div class="post-list">
+    {% for post in published_posts limit:3 %}
+    <a class="post-row" href="{{ post.url | relative_url }}">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+      <span class="post-row-main"><strong>{{ post.title | escape }}</strong>{% if post.description %}<span>{{ post.description | escape }}</span>{% endif %}</span>
+      <span class="item-arrow" aria-hidden="true">↗</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>

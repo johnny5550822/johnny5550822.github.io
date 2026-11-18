@@ -19,6 +19,8 @@ roles:
 
   - org: "Verily (Google Life Sciences)"
     logo: "verily.svg"
+    badge: "google.svg"        # Verily began as a Google life-sciences team
+    badge_alt: "Google"
     role: "Senior Data Scientist, Machine Learning (Tech Lead)"
     period: "Jan 2021 – May 2026"
     location: "Los Angeles, CA"
@@ -62,6 +64,14 @@ education:
     role: "M.S. & Ph.D., Medical Imaging Informatics"
     period: "Sep 2011 – Dec 2018"
     location: "Los Angeles, CA"
+    lab: "UCLA Medical Imaging Informatics (MII) group"
+    lab_url: "https://mii.ucla.edu/"
     highlights:
       - "Deep learning for acute ischemic stroke from MR imaging: onset-time classification and tissue-fate prediction."
       - "12 publications, 4 best-paper finalists and 2 granted patents."
+
+  - org: "University of California, Berkeley"
+    logo: "berkeley.svg"
+    role: "B.S., Bioengineering"
+    period: "Sep 2009 – Sep 2011"
+    location: "Berkeley, CA"

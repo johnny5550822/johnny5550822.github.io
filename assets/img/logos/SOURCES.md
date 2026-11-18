@@ -12,3 +12,5 @@ All files come from Wikimedia Commons. Licence status was checked on 2026-11-17.
 | ge.svg | [File:General Electric logo.svg](https://commons.wikimedia.org/wiki/File:General_Electric_logo.svg) | Public domain | none |
 | ibm.svg | [File:IBM logo.svg](https://commons.wikimedia.org/wiki/File:IBM_logo.svg) | Public domain | none |
 | amazon.svg | [File:Amazon logo.svg](https://commons.wikimedia.org/wiki/File:Amazon_logo.svg) | Public domain | none |
+| google.svg | [File:Google "G" logo.svg](https://commons.wikimedia.org/wiki/File:Google_%22G%22_logo.svg) | Public domain | none |
+| berkeley.svg | [File:University of California, Berkeley logo.svg](https://commons.wikimedia.org/wiki/File:University_of_California,_Berkeley_logo.svg) | Public domain | none |

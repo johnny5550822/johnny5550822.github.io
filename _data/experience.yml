@@ -1,0 +1,77 @@
+# Career timeline (newest first). Source of truth: King Chung Ho résumé (2026-11),
+# "PROFESSIONAL EXPERIENCE" / "EARLIER EXPERIENCE" / "EDUCATION". Do not add claims
+# that are not on the résumé. Business/financial figures on the résumé are deliberately
+# left off this public page.
+# The Verily sensor modalities (PPG, accelerometer, gyroscope) come from Johnny's
+# instructions (the résumé says "multiple sensor modalities").
+# Logos: see assets/img/logos/SOURCES.md
+
+roles:
+  - org: "Edwards Lifesciences"
+    logo: "edwards.svg"
+    role: "Senior Principal AI Engineer, Machine Learning (Tech Lead)"
+    period: "Jun 2026 – Present"
+    location: "Irvine, CA"
+    highlights:
+      - "Technical owner of the end-to-end AI imaging platform; lead a six-person AI/ML team across data, foundation models and production AI systems."
+      - "Architected and launched an AI-assisted image annotation platform that **cut expert annotation time by 50%**, and lead the production batch-inference system designed to scale to millions of DICOM images."
+      - "Lead CT anatomical localization built on image foundation models (e.g., Merlin) and few-shot learning for limited-label regimes, reaching **< 3 mm localization error** against expert annotations."
+
+  - org: "Verily (Google Life Sciences)"
+    logo: "verily.svg"
+    badge: "google.svg"        # Verily began as a Google life-sciences team
+    badge_alt: "Google"
+    role: "Senior Data Scientist, Machine Learning (Tech Lead)"
+    period: "Jan 2021 – May 2026"
+    location: "Los Angeles, CA"
+    highlights:
+      - "Tech lead of a **three-person ML team**, owning foundation-model development end to end on multi-terabyte longitudinal wearable datasets from studies in the U.S., Europe and Asia."
+      - "Built multimodal self-supervised foundation models on **1.6M+ hours** of wearable sensor data (PPG, accelerometer, gyroscope); the embeddings **improved AUROC by 10% on average across 20+ downstream tasks**. Extended multimodal vision transformers to combine sensor modalities with text."
+      - "Made Vertex AI training **5× faster**, built cross-partner Dataflow harmonization pipelines, and co-authored **5 Nature Portfolio papers** and 3 patents."
+
+  - org: "SurveyMonkey"
+    logo: "surveymonkey.png"
+    role: "ML Data Scientist"
+    period: "Feb 2019 – Jan 2021"
+    location: "San Mateo, CA"
+    highlights:
+      - "Led ML development for next-generation AI features on the core survey platform; **deployed 6 production ML models**."
+      - "Built survey completion-rate and completion-time prediction models, improving prediction by **10%+** across key customer segments."
+      - "Granted patent (US 12,141,663 B2) and the SurveyMonkey Patent Award."
+
+internships:
+  period: "2012 – 2017"
+  items:
+    - org: "GE Healthcare"
+      logo: "ge.svg"
+      role: "ML Data Scientist Intern"
+      year: "2017"
+      note: "Breast-cancer ROI detection (R-CNN, YOLO) integrated into clinical imaging workflows."
+    - org: "IBM"
+      logo: "ibm.svg"
+      role: "ML Data Scientist Intern"
+      year: "2016"
+      note: "OCR framework for Watson Health breast-ultrasound images; resulted in a granted patent."
+    - org: "Amazon"
+      logo: "amazon.svg"
+      role: "Software Development Engineer Intern"
+      year: "2012"
+      note: "Java/Spring MVC application for warehouse inventory."
+
+education:
+  - org: "University of California, Los Angeles"
+    logo: "ucla.svg"
+    role: "M.S. & Ph.D., Medical Imaging Informatics"
+    period: "Sep 2011 – Dec 2018"
+    location: "Los Angeles, CA"
+    lab: "UCLA Medical Imaging Informatics (MII) group"
+    lab_url: "https://mii.ucla.edu/"
+    highlights:
+      - "Deep learning for acute ischemic stroke from MR imaging: onset-time classification and tissue-fate prediction."
+      - "12 publications, 4 best-paper finalists and 2 granted patents."
+
+  - org: "University of California, Berkeley"
+    logo: "berkeley.svg"
+    role: "B.S., Bioengineering"
+    period: "Sep 2009 – Sep 2011"
+    location: "Berkeley, CA"

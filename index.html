@@ -1,13 +1,94 @@
 ---
 layout: default
-title: Home
+description: "King Chung (Johnny) Ho, Ph.D.: applied AI/ML researcher and engineer working on foundation models, multimodal learning, reinforcement learning, search and AI agents."
 ---
+<section class="hero" aria-labelledby="hero-name">
+  <img class="hero-photo" src="{{ '/assets/img/profile.webp' | relative_url }}" alt="Portrait of King Chung (Johnny) Ho" width="160" height="160">
+  <div class="hero-text">
+    <h1 id="hero-name">King Chung (Johnny) Ho</h1>
+    <blockquote class="hero-quote"><p>“Don't just aspire to make a living; aspire to make a difference.”</p></blockquote>
+  </div>
+</section>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
-    {{ post.content }}
-  </article>
-  {% endfor %}
+<div class="bio">
+  <p>I’m an AI researcher and engineer passionate about building intelligent systems that learn, reason, and solve real-world problems. My interests span foundation models, multimodal learning, reinforcement learning, and autonomous AI agents. I’m particularly excited about turning cutting-edge AI research into systems that actually work.</p>
+  <p>Currently, I’m a Senior Principal AI Engineer and tech lead at <strong>Edwards Lifesciences</strong>, building AI-powered medical imaging systems and image foundation models. Previously, at <strong>Verily (Google Life Sciences)</strong>, I developed multimodal foundation models trained on over <strong>1.6 million hours of wearable sensor data</strong>. I earned my Ph.D. from <strong>UCLA</strong>, where I researched deep learning for stroke imaging.</p>
+  <p><strong>Outside of work, I explore emerging AI research by building things from scratch. I share my experiments, discoveries, and occasional failures on my <a href="{{ '/blog/' | relative_url }}">blog</a>.</strong></p>
 </div>
 
+<ul class="interests" aria-label="Research interests">
+  <li>Foundation models</li><li>Multimodal learning</li><li>Reinforcement learning</li><li>Search</li><li>AI agents</li>
+</ul>
+
+{% include social-links.html %}
+
+<section class="section" id="experience" aria-labelledby="experience-title">
+  <h2 class="section-label" id="experience-title">Experience</h2>
+  <ol class="roles">
+    {%- for r in site.data.experience.roles %}{% include role.html r=r %}{% endfor %}
+    {%- assign intern = site.data.experience.internships %}
+    <li class="role role-compact">
+      <div class="role-logo role-logo-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3.5 8h17v11h-17zM9 8V5.5h6V8M3.5 13h17"/></svg></div>
+      <div class="role-body">
+        <div class="role-head"><h3>Internships</h3><span class="role-period">{{ intern.period }}</span></div>
+        <ul class="interns">
+          {%- for i in intern.items %}
+          <li>
+            <span class="intern-logo"><img src="{{ '/assets/img/logos/' | append: i.logo | relative_url }}" alt="{{ i.org }}" loading="lazy"></span>
+            <span class="intern-text"><strong>{{ i.role }}</strong>, {{ i.org }} <span class="intern-year">· {{ i.year }}</span><span class="intern-note">{{ i.note }}</span></span>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </li>
+    {%- for r in site.data.experience.education %}{% include role.html r=r %}{% endfor %}
+  </ol>
+</section>
+
+<section class="section" id="patents" aria-labelledby="patents-title">
+  <div class="section-head">
+    <h2 class="section-label" id="patents-title">Patents</h2>
+    <a class="section-more" href="https://patents.google.com/?inventor=king+chung+ho&amp;oq=king+chung+ho" rel="noopener">View all patents →</a>
+  </div>
+  <p class="section-intro">Lead inventor on {{ site.data.patents.size }} published patent records, spanning AI-powered medical imaging, deep learning, survey intelligence, and digital health biomarkers. An additional patent from my work at Verily is currently in preparation.</p>
+  <h3 class="subhead">Selected patents</h3>
+  <ul class="patents">
+    {%- for pt in site.data.patents %}{% if pt.selected %}
+    <li><a href="https://patents.google.com/patent/{{ pt.number }}/en" rel="noopener">{{ pt.title | escape }}</a> <span class="patent-meta">— {{ pt.assignee }} · {{ pt.year }}</span></li>
+    {%- endif %}{% endfor %}
+  </ul>
+</section>
+
+<section class="section" id="publications" aria-labelledby="publications-title">
+  <div class="section-head">
+    <h2 class="section-label" id="publications-title">Selected publications</h2>
+    <a class="section-more" href="{{ site.links.scholar }}" rel="noopener">Google Scholar →</a>
+  </div>
+  <ol class="pubs">
+    {%- for p in site.data.publications %}
+    <li class="pub">
+      <a class="pub-thumb" href="{{ p.url }}" rel="noopener" tabindex="-1" aria-hidden="true">
+        <img src="{{ '/assets/img/pubs/' | append: p.thumb | relative_url }}" alt="" width="160" height="120" loading="lazy" title="{{ p.figure }} from the article; {{ p.license }}">
+      </a>
+      <div class="pub-body">
+        <a class="pub-title" href="{{ p.url }}" rel="noopener">{{ p.title | escape }}</a>
+        <p class="pub-meta"><em>{{ p.venue | escape }}</em> · {{ p.year }}{% if p.note %} <span class="badge">{{ p.note | escape }}</span>{% endif %}</p>
+        {% if p.summary %}<p class="pub-summary">{{ p.summary | escape }}</p>{% endif %}
+        <p class="pub-authors">{{ p.authors | escape | replace: 'K.C. Ho', '<strong>K.C. Ho</strong>' }}</p>
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
+  <p class="fine-print">Thumbnails are Fig. 1 of each article, © the authors, reproduced from the publisher under each article's Creative Commons licence (CC BY 4.0, or CC BY-NC-ND 4.0 resized without modification). Follow each link for the original figure and licence.</p>
+</section>
+
+{%- assign recent = site.posts | slice: 0, 3 %}
+{%- if recent.size > 0 %}
+<section class="section" id="writing" aria-labelledby="writing-title">
+  <div class="section-head">
+    <h2 class="section-label" id="writing-title">Writing</h2>
+    <a class="section-more" href="{{ '/blog/' | relative_url }}">All posts →</a>
+  </div>
+  {% include post-list.html posts=recent %}
+</section>
+{%- endif %}

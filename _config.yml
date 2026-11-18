@@ -1,36 +1,65 @@
-# Permalinks
-permalink:           pretty
+# Site identity -------------------------------------------------------------
+title: "King Chung (Johnny) Ho"
+tagline: "Applied AI/ML research and engineering"
+description: >-
+  King Chung (Johnny) Ho, Ph.D.: machine learning researcher and engineer.
+  Selected publications, career timeline and technical writing.
+lang: en_US
+timezone: America/Los_Angeles
 
-# Setup
-title:               Johnny Ho
-tagline:             PhD candidate in imaging informatics
-url:                 http://johnny5550822.github.com
-paginate:            1
-baseurl:             ""
+# When king.ai is live, change url to "https://king.ai" (see README).
+url: "https://johnny5550822.github.io"
+baseurl: ""
 
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
-
-# About/contact
 author:
-  name:              King Chung (Johnny) Ho
-  url:               http://johnny5550822.github.com
-  email:             johnny5550822@g.ucla.edu
+  name: "King Chung (Johnny) Ho"
+  email: "johnny5550822@gmail.com"
 
-# Custom vars
-version:             2.0.0
-github:              johnny5550822
+links:
+  scholar: "https://scholar.google.com/citations?user=7VJYOzUAAAAJ&hl=en&oi=ao"
+  linkedin: "https://www.linkedin.com/in/kingchungho"
+  github: "https://github.com/johnny5550822"
+  email: "johnny5550822@gmail.com"
 
-# social media
-twitter_username:     kingchungho
-github_username:      johnny5550822
-linkedin_username:    kingchungho
+# jekyll-seo-tag
+social:
+  name: "King Chung Ho"
+  links:
+    - "https://scholar.google.com/citations?user=7VJYOzUAAAAJ"
+    - "https://www.linkedin.com/in/kingchungho"
+    - "https://github.com/johnny5550822"
 
-# Gems
-gems:
-  - jekyll-paginate
-  - jekyll-gist
+# Build ---------------------------------------------------------------------
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  math_engine: mathjax   # emits \( \) / \[ \]; rendered client-side by KaTeX
+  syntax_highlighter: rouge
+  footnote_backlink: "↩︎"
+
+permalink: /blog/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+
+exclude:
+  - README.md
+  - LICENSE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - scripts
+  - docs
+  - .github
+  - public

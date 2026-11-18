@@ -1,0 +1,24 @@
+{%- assign r = include.r -%}
+<li class="role">
+  <div class="role-logo-wrap">
+    <div class="role-logo"><img src="{{ '/assets/img/logos/' | append: r.logo | relative_url }}" alt="{{ r.org }} logo" width="40" height="40" loading="lazy"></div>
+    {%- if r.badge %}<div class="role-logo"><img src="{{ '/assets/img/logos/' | append: r.badge | relative_url }}" alt="{{ r.badge_alt }} logo" width="40" height="40" loading="lazy"></div>{% endif %}
+  </div>
+  <div class="role-body">
+    <div class="role-head">
+      <h3>{{ r.org }}</h3>
+      <span class="role-period">{{ r.period }}</span>
+    </div>
+    <p class="role-title">{{ r.role }}{% if r.location %}<span class="role-loc"> · {{ r.location }}</span>{% endif %}</p>
+    {%- if r.lab %}
+    <p class="role-lab"><a href="{{ r.lab_url }}" rel="noopener">{{ r.lab }}</a></p>
+    {%- endif %}
+    {%- if r.highlights %}
+    <ul class="role-points">
+      {%- for h in r.highlights %}
+      <li>{{ h | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </div>
+</li>

@@ -220,6 +220,7 @@ img { max-width: 100%; }
 
 .prose { font-family: var(--serif); font-size: 20px; line-height: 1.68; color: var(--text); overflow-wrap: break-word; }
 .prose > :first-child { margin-top: 0; }
+.prose p, .prose li, .prose blockquote, .post-deck { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .prose p, .prose ul, .prose ol, .prose blockquote, .prose figure, .prose table, .prose .highlighter-rouge, .prose .katex-display { margin: 0 0 1.2em; }
 .prose h2, .prose h3, .prose h4 { font-family: var(--sans); margin: 2em 0 .6em; letter-spacing: -0.015em; scroll-margin-top: 76px; }
 .prose h2 { font-size: 24px; }
@@ -322,5 +323,8 @@ img { max-width: 100%; }
 .patent-meta { color: var(--muted); font-size: 14px; }
 @media (max-width: 640px) {
 }
-/* Justified intro reads well at desktop widths; narrow phone columns leave large gaps, so left-align there. */
-@media (max-width: 520px) { .bio { text-align: left; hyphens: manual; -webkit-hyphens: manual; } }
+
+/* Justified body text across the homepage (Johnny's preference); hyphenation keeps word gaps even. */
+.role-points li, .intern-note, .section-intro, .patents li, .pub-title, .pub-summary, .role-lab {
+  text-align: justify; hyphens: auto; -webkit-hyphens: auto;
+}

@@ -11,8 +11,8 @@ description: "Technical writing by King Chung (Johnny) Ho: research notes, exper
 {%- assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 {%- for year in years %}
 <section class="year" aria-labelledby="y{{ year.name }}">
-  <h2 id="y{{ year.name }}">{{ year.name }}</h2>
-  {% include post-list.html posts=year.items date_format='%b %-d' %}
+  <h2 class="section-label" id="y{{ year.name }}">{{ year.name }}</h2>
+  {% include post-list.html posts=year.items %}
 </section>
 {%- else %}
 <p>No posts yet.</p>

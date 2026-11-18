@@ -1,35 +1,76 @@
-# Selected peer-reviewed papers in Nature Portfolio journals.
-# Every entry was checked against the publisher page (citation_* metadata) and
-# Google Scholar on 2026-11-17. Author strings are abbreviated; "K.C. Ho" is bolded.
-# Display order = order in this file.
-
+# Selected Nature Portfolio papers (newest first). Verified 2026-11-17 against the
+# publisher page (citation_* metadata) and Crossref: title, journal, year, author list
+# and K.C. Ho's position. "summary" paraphrases the article abstract.
+# Thumbnails are Fig. 1 of each article, used under the article's own licence:
+#   CC BY 4.0        -> resized, may be cropped (crop noted in `figure`)
+#   CC BY-NC-ND 4.0  -> resized only, never cropped or otherwise altered
 - title: "Wearable-sensor based walking and non-walking measures as progression markers in early to mid-stage Parkinson’s disease"
-  authors: "K.C. Ho, S. Li, C. Serrano-Amenos, N. Kowahl, et al. (14 authors)"
+  authors: "K.C. Ho, S. Li, C. Serrano-Amenos, N. Kowahl, et al."
   venue: "npj Parkinson's Disease"
   year: 2026
   note: "First author"
+  summary: "Longitudinal wearable data from early-stage PD: 7 digital walking and non-walking measures showed larger 2-year effect sizes than gold-standard clinical measures."
   url: "https://www.nature.com/articles/s41531-026-01358-z"
+  thumb: "s41531-026-01358-z.webp"
+  license: "CC BY-NC-ND 4.0"
+  figure: "Fig. 1, resized"
 
-- title: "Interpretable and granular video-based quantification of motor characteristics from the finger-tapping test in Parkinson’s disease"
-  authors: "T. Zarrat Ehsan, M. Tangermann, Y. Güçlütürk, S. Shin, K.C. Ho, et al. (7 authors)"
+- title: "Video-based quantification of leg agility in Parkinson’s disease and its relationship to upper extremity motor impairments"
+  authors: "T. Zarrat Ehsan, M. Tangermann, K.C. Ho, B.R. Bloem, L.J.W. Evers"
   venue: "npj Parkinson's Disease"
   year: 2026
+  summary: "Computer-vision framework that quantifies bradykinesia, hypokinesia, sequence effect and hesitation-halts from 3,097 leg-agility videos of 443 participants."
+  url: "https://www.nature.com/articles/s41531-026-01558-7"
+  thumb: "s41531-026-01558-7.webp"
+  license: "CC BY 4.0"
+  figure: "Fig. 1, resized"
+
+- title: "Longitudinal progression of digital arm swing measures during free-living gait in early Parkinson’s disease"
+  authors: "E. Post, T. van Laarhoven, N.A. Timmermans, Y.P. Raykov, M.A. Little, …, K.C. Ho, et al."
+  venue: "npj Parkinson's Disease"
+  year: 2026
+  summary: "Wrist-sensor arm-swing measures from everyday walking in 623 people with early PD were highly reliable and, in unmedicated participants, declined within one year."
+  url: "https://www.nature.com/articles/s41531-026-01609-z"
+  thumb: "s41531-026-01609-z.webp"
+  license: "CC BY 4.0"
+  figure: "Fig. 1, resized"
+
+- title: "Interpretable and granular video-based quantification of motor characteristics from the finger-tapping test in Parkinson’s disease"
+  authors: "T. Zarrat Ehsan, M. Tangermann, Y. Güçlütürk, S. Shin, K.C. Ho, et al."
+  venue: "npj Parkinson's Disease"
+  year: 2026
+  summary: "Computer-vision features for hypokinesia, bradykinesia, sequence effect and hesitation-halts from finger-tapping videos."
   url: "https://www.nature.com/articles/s41531-026-01307-w"
+  thumb: "s41531-026-01307-w.webp"
+  license: "CC BY 4.0"
+  figure: "Fig. 1, resized"
 
 - title: "Optimizing wrist-worn wearable compliance with insights from two Parkinson’s disease cohort studies"
-  authors: "M.J. Meinders, L. Heathers, K.C. Ho, L. Russell, et al. (8 authors)"
+  authors: "M.J. Meinders, L. Heathers, K.C. Ho, L. Russell, et al."
   venue: "npj Parkinson's Disease"
   year: 2025
+  summary: "Two multi-year smartwatch cohorts reached a median of ~21–22 hours of daily wear without showing participants their own data."
   url: "https://www.nature.com/articles/s41531-025-01016-w"
+  thumb: "s41531-025-01016-w.webp"
+  license: "CC BY-NC-ND 4.0"
+  figure: "Fig. 1, resized"
 
 - title: "Analytical and clinical validity of wearable, multi-sensor technology for assessment of motor function in patients with Parkinson’s disease in Japan"
-  authors: "G. Oyama, M. Burq, T. Hatano, W.J. Marks, et al., K.C. Ho, et al. (28 authors)"
+  authors: "G. Oyama, M. Burq, T. Hatano, W.J. Marks, …, K.C. Ho, et al."
   venue: "Scientific Reports"
   year: 2023
+  summary: "Validated multi-sensor smartwatch measures of PD motor function in hospital and at home (96 patients)."
   url: "https://www.nature.com/articles/s41598-023-29382-6"
+  thumb: "s41598-023-29382-6.webp"
+  license: "CC BY 4.0"
+  figure: "Fig. 1, cropped to panels a–b and resized"
 
 - title: "Virtual exam for Parkinson’s disease enables frequent and reliable remote measurements of motor function"
-  authors: "M. Burq, E. Rainaldi, K.C. Ho, C. Chen, et al. (10 authors)"
+  authors: "M. Burq, E. Rainaldi, K.C. Ho, C. Chen, et al."
   venue: "npj Digital Medicine"
   year: 2022
+  summary: "A smartwatch-based virtual motor exam for unsupervised, remote measurement of PD motor signs (388 participants, median 390 days)."
   url: "https://www.nature.com/articles/s41746-022-00607-8"
+  thumb: "s41746-022-00607-8.webp"
+  license: "CC BY 4.0"
+  figure: "Fig. 1, cropped to panel c and resized"

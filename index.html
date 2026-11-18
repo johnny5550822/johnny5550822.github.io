@@ -1,53 +1,78 @@
 ---
 layout: default
-description: "King Chung (Johnny) Ho, Ph.D.: machine learning researcher and engineer. Career timeline, selected publications and technical writing."
+description: "King Chung (Johnny) Ho, Ph.D.: applied AI/ML researcher and engineer working on foundation models, multimodal learning, reinforcement learning, search and AI agents."
 ---
-<section class="intro" aria-labelledby="intro-name">
-  <h1 id="intro-name">King Chung (Johnny) Ho</h1>
-  <p class="intro-role">Machine learning researcher &amp; engineer</p>
-  <div class="intro-body">
-    <p>I work on machine learning for healthcare. I'm currently at <strong>Edwards Lifesciences</strong>. Before that I was at <strong>Verily</strong>, building digital measures of Parkinson's disease from wearable sensors and video. I earned my Ph.D. at <strong>UCLA</strong>, where I applied deep learning to medical imaging for acute ischemic stroke.</p>
-    <p>Outside work I build game-playing agents and write about what I learn along the way in the <a href="{{ '/blog/' | relative_url }}">blog</a>.</p>
+<section class="hero" aria-labelledby="hero-name">
+  <img class="hero-photo" src="{{ '/assets/img/profile.webp' | relative_url }}" alt="Portrait of King Chung (Johnny) Ho" width="160" height="160">
+  <div class="hero-text">
+    <h1 id="hero-name">King Chung (Johnny) Ho</h1>
+    <blockquote class="hero-quote"><p>“Don't just aspire to make a living; aspire to make a difference.”</p></blockquote>
   </div>
-  {% include social-links.html %}
 </section>
 
-<section class="section" id="timeline" aria-labelledby="timeline-title">
-  <h2 id="timeline-title">Timeline</h2>
-  <ol class="timeline">
-    {%- for item in site.data.timeline %}
-    <li class="timeline-item">
-      <span class="timeline-period">{{ item.period }}</span>
-      <div class="timeline-body">
-        <h3>{% if item.title and item.title != "" %}{{ item.title | escape }}<span class="sep" aria-hidden="true"> · </span>{% endif %}<span class="timeline-org">{{ item.organization | escape }}</span></h3>
-        {% if item.description %}<p>{{ item.description | escape }}</p>{% endif %}
+<div class="bio">
+  <p>I'm an applied AI/ML researcher and engineer. Most of my work is machine learning that has to hold up outside the lab, where labels are scarce, data arrives messy from many sites, and the people affected by a model's output are patients.</p>
+  <p>Today I'm a Senior Principal AI Engineer and tech lead at <strong>Edwards Lifesciences</strong>, where my team builds the imaging platform and image foundation models behind AI-assisted medical imaging. Before that I spent five years at <strong>Verily</strong> (Google Life Sciences) training multimodal foundation models on more than 1.6&nbsp;million hours of wearable sensor data. I did my Ph.D. at <strong>UCLA</strong> on deep learning for stroke imaging.</p>
+  <p>I keep up with the research frontier by building things myself. My current independent project is an agent for competitive Pokémon battles that combines imitation learning, search and reinforcement learning: a small lab for questions about planning when much of the game state is hidden. I write about it on the <a href="{{ '/blog/' | relative_url }}">blog</a>.</p>
+</div>
+
+<ul class="interests" aria-label="Research interests">
+  <li>Foundation models</li><li>Multimodal learning</li><li>Reinforcement learning</li><li>Search</li><li>AI agents</li>
+</ul>
+
+{% include social-links.html %}
+
+<section class="section" id="experience" aria-labelledby="experience-title">
+  <h2 class="section-label" id="experience-title">Experience</h2>
+  <ol class="roles">
+    {%- for r in site.data.experience.roles %}{% include role.html r=r %}{% endfor %}
+    {%- assign intern = site.data.experience.internships %}
+    <li class="role role-compact">
+      <div class="role-logo role-logo-icon" aria-hidden="true"><svg viewBox="0 0 24 24" class="icon"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3.5 8h17v11h-17zM9 8V5.5h6V8M3.5 13h17"/></svg></div>
+      <div class="role-body">
+        <div class="role-head"><h3>Internships</h3><span class="role-period">{{ intern.period }}</span></div>
+        <ul class="interns">
+          {%- for i in intern.items %}
+          <li>
+            <span class="intern-logo"><img src="{{ '/assets/img/logos/' | append: i.logo | relative_url }}" alt="{{ i.org }}" loading="lazy"></span>
+            <span class="intern-text"><strong>{{ i.role }}</strong>, {{ i.org }} <span class="intern-year">· {{ i.year }}</span><span class="intern-note">{{ i.note }}</span></span>
+          </li>
+          {%- endfor %}
+        </ul>
       </div>
     </li>
-    {%- endfor %}
+    {%- for r in site.data.experience.education %}{% include role.html r=r %}{% endfor %}
   </ol>
 </section>
 
 <section class="section" id="publications" aria-labelledby="publications-title">
   <div class="section-head">
-    <h2 id="publications-title">Selected publications</h2>
-    <a class="section-more" href="{{ site.links.scholar }}" rel="noopener">All on Google Scholar →</a>
+    <h2 class="section-label" id="publications-title">Selected publications</h2>
+    <a class="section-more" href="{{ site.links.scholar }}" rel="noopener">Google Scholar →</a>
   </div>
   <ol class="pubs">
-    {%- for paper in site.data.publications %}
+    {%- for p in site.data.publications %}
     <li class="pub">
-      <a class="pub-title" href="{{ paper.url }}" rel="noopener">{{ paper.title | escape }}</a>
-      <p class="pub-authors">{{ paper.authors | escape | replace: 'K.C. Ho', '<strong>K.C. Ho</strong>' }}</p>
-      <p class="pub-venue"><em>{{ paper.venue | escape }}</em>, {{ paper.year }}{% if paper.note %} <span class="badge">{{ paper.note | escape }}</span>{% endif %}</p>
+      <a class="pub-thumb" href="{{ p.url }}" rel="noopener" tabindex="-1" aria-hidden="true">
+        <img src="{{ '/assets/img/pubs/' | append: p.thumb | relative_url }}" alt="" width="160" height="120" loading="lazy" title="{{ p.figure }} from the article; {{ p.license }}">
+      </a>
+      <div class="pub-body">
+        <a class="pub-title" href="{{ p.url }}" rel="noopener">{{ p.title | escape }}</a>
+        <p class="pub-meta"><em>{{ p.venue | escape }}</em> · {{ p.year }}{% if p.note %} <span class="badge">{{ p.note | escape }}</span>{% endif %}</p>
+        {% if p.summary %}<p class="pub-summary">{{ p.summary | escape }}</p>{% endif %}
+        <p class="pub-authors">{{ p.authors | escape | replace: 'K.C. Ho', '<strong>K.C. Ho</strong>' }}</p>
+      </div>
     </li>
     {%- endfor %}
   </ol>
+  <p class="fine-print">Thumbnails are Fig. 1 of each article, © the authors, reproduced from the publisher under each article's Creative Commons licence (CC BY 4.0, or CC BY-NC-ND 4.0 resized without modification). Follow each link for the original figure and licence.</p>
 </section>
 
-{%- assign recent = site.posts | slice: 0, 5 %}
+{%- assign recent = site.posts | slice: 0, 3 %}
 {%- if recent.size > 0 %}
 <section class="section" id="writing" aria-labelledby="writing-title">
   <div class="section-head">
-    <h2 id="writing-title">Recent writing</h2>
+    <h2 class="section-label" id="writing-title">Writing</h2>
     <a class="section-more" href="{{ '/blog/' | relative_url }}">All posts →</a>
   </div>
   {% include post-list.html posts=recent %}

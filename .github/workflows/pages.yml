@@ -26,6 +26,14 @@ jobs:
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+      - name: Check that drafts are not published
+        run: |
+          for f in _drafts/*.md; do
+            slug=$(basename "$f" .md)
+            if [ -e "_site/blog/$slug" ] || grep -rq "$slug" _site/blog/index.html _site/feed.xml _site/sitemap.xml; then
+              echo "Draft $slug leaked into the build"; exit 1
+            fi
+          done
       - name: Check HTML and internal links
         run: bundle exec htmlproofer _site --disable-external --ignore-urls "/^https?:\/\/(localhost|127\.0\.0\.1)/"
       - name: Upload preview (pull requests)

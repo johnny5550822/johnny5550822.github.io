@@ -22,9 +22,9 @@ The post appears on `/blog/`, in "Recent writing" on the homepage, in `feed.xml`
 
 ## Editing the homepage
 
-- Intro text: `index.html`
-- Career timeline: `_data/timeline.yml`
-- Selected publications: `_data/publications.yml`
+- Intro, quote and photo: `index.html` (photo: `assets/img/profile.webp`)
+- Experience timeline: `_data/experience.yml` (logos in `assets/img/logos/`, sources in `SOURCES.md`)
+- Selected publications: `_data/publications.yml` (thumbnails in `assets/img/pubs/`, 480×360 WebP; respect each article's licence, NC-ND figures must not be cropped)
 - Links, name and site URL: `_config.yml`
 - Styles: `assets/css/site.css` (colours are CSS variables at the top; dark mode is `:root[data-theme="dark"]`)
 
@@ -35,7 +35,8 @@ Requires Ruby 3.x or newer (`brew install ruby`).
 ```bash
 bundle config set --local path vendor/bundle
 bundle install
-bundle exec jekyll serve --livereload --drafts   # http://localhost:4000
+bundle exec jekyll serve --livereload            # http://localhost:4000
+bundle exec jekyll serve --livereload --drafts   # also renders _drafts/ (local only)
 ```
 
 Production check (what CI runs):

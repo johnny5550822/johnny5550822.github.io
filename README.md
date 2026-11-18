@@ -48,6 +48,9 @@ bundle exec htmlproofer _site --disable-external
 
 ## Deployment
 
+Going public for the first time: follow `docs/PUBLISHING.md`.
+
+
 `.github/workflows/pages.yml` builds the site and checks its HTML and internal links on every pull request, then uploads the built site as a downloadable `site-preview` artifact. On a push to `master` it deploys to GitHub Pages.
 
 One-time setup after merging: **Settings → Pages → Build and deployment → Source: GitHub Actions**. Pages on a **private** repository needs a paid GitHub plan, and the published site is public either way.

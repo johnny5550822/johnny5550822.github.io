@@ -11,7 +11,8 @@ permissions:
 
 concurrency:
   group: site-${{ github.ref }}
-  cancel-in-progress: true
+  # Cancel superseded PR builds, but never interrupt a Pages deployment from master.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:

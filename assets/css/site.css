@@ -307,24 +307,20 @@ img { max-width: 100%; }
 @media (max-width: 640px) { .pub-title { line-height: 1.38; } .pub-authors { font-size: 12.5px; } }
 .prose figcaption code { color: var(--text-2); }
 
-/* Logo badge (e.g. Google on Verily) */
-.role-logo-wrap { position: relative; width: 48px; height: 48px; }
-.role-badge { position: absolute; right: -6px; bottom: -6px; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--tile); box-shadow: 0 0 0 1px var(--line-strong), 0 0 0 3px var(--bg); }
-.role-badge img { width: 13px; height: 13px; }
+/* Second logo stacked under the first (e.g. Verily + Google), same size */
+.role-logo-wrap { display: flex; flex-direction: column; gap: 8px; }
 .role-lab { margin: 2px 0 0; font-size: 14px; }
 
 /* Patents */
 .section-intro { margin: -8px 0 18px; color: var(--text-2); font-size: 15px; line-height: 1.65; }
 .patents { margin: 0; padding: 0; list-style: none; }
-.patents li { display: grid; grid-template-columns: 150px 1fr; gap: 18px; padding: 11px 0; border-top: 1px solid var(--line); align-items: baseline; }
-.patents li:first-child { border-top: 0; }
-.patent-no { font-family: var(--mono); font-size: 13px; font-variant-numeric: tabular-nums; }
-.patent-body { display: flex; flex-direction: column; gap: 1px; }
-.patent-title { color: var(--text); font-size: 15px; line-height: 1.45; }
-.patent-meta { color: var(--muted); font-size: 13px; }
+.subhead { margin: 0 0 8px; font-size: 14px; font-weight: 600; color: var(--text); }
+.patents li { padding: 7px 0 7px 16px; position: relative; font-size: 15px; line-height: 1.55; }
+.patents li::before { content: ""; position: absolute; left: 2px; top: 1.05em; width: 5px; height: 5px; border-radius: 50%; background: var(--faint); }
+.patents a { color: var(--text); }
+.patents a:hover { color: var(--accent); }
+.patent-meta { color: var(--muted); font-size: 14px; }
 @media (max-width: 640px) {
-  .role-logo-wrap { width: 40px; height: 40px; }
-  .patents li { grid-template-columns: 1fr; gap: 2px; }
 }
 /* Justified intro reads well at desktop widths; narrow phone columns leave large gaps, so left-align there. */
 @media (max-width: 520px) { .bio { text-align: left; hyphens: manual; -webkit-hyphens: manual; } }

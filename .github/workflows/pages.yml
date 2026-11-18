@@ -26,9 +26,10 @@ jobs:
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
-      - name: Check that drafts are not published
+      - name: Check that drafts and docs are not published
         run: |
-          for f in _drafts/*.md; do
+          for f in _drafts/*.md docs/*.md; do
+            [ -e "$f" ] || continue
             slug=$(basename "$f" .md)
             if [ -e "_site/blog/$slug" ] || grep -rq "$slug" _site/blog/index.html _site/feed.xml _site/sitemap.xml; then
               echo "Draft $slug leaked into the build"; exit 1

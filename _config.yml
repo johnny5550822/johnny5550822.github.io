@@ -60,5 +60,6 @@ exclude:
   - Gemfile.lock
   - vendor
   - scripts
+  - docs
   - .github
   - public

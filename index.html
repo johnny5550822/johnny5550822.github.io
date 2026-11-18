@@ -46,15 +46,16 @@ description: "King Chung (Johnny) Ho, Ph.D.: applied AI/ML researcher and engine
 </section>
 
 <section class="section" id="patents" aria-labelledby="patents-title">
-  <h2 class="section-label" id="patents-title">Patents</h2>
-  <p class="section-intro">Inventor on seven patent publications (three granted U.S. patents and four published applications) spanning deep learning for perfusion MR imaging, echocardiogram analysis, survey-question quality, and digital measures of disease progression.</p>
+  <div class="section-head">
+    <h2 class="section-label" id="patents-title">Patents</h2>
+    <a class="section-more" href="https://patents.google.com/?inventor=king+chung+ho&amp;oq=king+chung+ho" rel="noopener">View all patents →</a>
+  </div>
+  <p class="section-intro">Lead inventor on {{ site.data.patents.size }} published patent records, spanning AI-powered medical imaging, deep learning, survey intelligence, and digital health biomarkers. An additional patent from my work at Verily is currently in preparation.</p>
+  <h3 class="subhead">Selected patents</h3>
   <ul class="patents">
-    {%- for pt in site.data.patents %}
-    <li>
-      <a class="patent-no" href="https://patents.google.com/patent/{{ pt.number }}/en" rel="noopener">{{ pt.number }}</a>
-      <span class="patent-body"><span class="patent-title">{{ pt.title | escape }}</span><span class="patent-meta">{{ pt.assignee }} · {{ pt.year }} · {{ pt.status }}</span></span>
-    </li>
-    {%- endfor %}
+    {%- for pt in site.data.patents %}{% if pt.selected %}
+    <li><a href="https://patents.google.com/patent/{{ pt.number }}/en" rel="noopener">{{ pt.title | escape }}</a> <span class="patent-meta">— {{ pt.assignee }} · {{ pt.year }}</span></li>
+    {%- endif %}{% endfor %}
   </ul>
 </section>
 

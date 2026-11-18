@@ -2,6 +2,7 @@
 # Verified 2026-11-17 on Google Patents (inventor search + each patent page):
 # number, title, original assignee, publication year, status.
 # Not included: results for "King Chung Kelvin Ho" (a different inventor).
+# `selected: true` entries are shown on the homepage; the count uses all entries.
 - number: "US12141663B2"
   title: "Double-barreled question predictor and correction"
   assignee: "SurveyMonkey"
@@ -18,16 +19,19 @@
   year: 2020
   status: "Granted"
 - number: "WO2026064496A1"
+  selected: true
   title: "Training models to combine measures for detecting disease progression"
   assignee: "Verily"
   year: 2026
   status: "Application"
 - number: "EP4637548A1"
+  selected: true
   title: "Establishing optimal aggregation of data in signals generated in free-living scenarios"
   assignee: "Verily"
   year: 2025
   status: "Application"
 - number: "WO2025128637A9"
+  selected: true
   title: "Systems and methods for identifying disease progression biomarkers using non-ambulatory patient data"
   assignee: "Verily"
   year: 2025

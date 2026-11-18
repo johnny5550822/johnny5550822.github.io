@@ -18,7 +18,7 @@ Markdown goes here.
 
 The post appears on `/blog/`, in "Recent writing" on the homepage, in `feed.xml` and in `sitemap.xml`. Its URL is `/blog/short-title/`.
 
-`_drafts/markdown-style-guide.md` shows every supported element: code with syntax highlighting, `$$…$$` equations (rendered by KaTeX, which loads only on pages that contain math), tables, figures with captions, footnotes and task lists. Drafts are never published. Put images in `assets/img/posts/`.
+`docs/markdown-style-guide.md` (reference only, never built) shows every supported element: code with syntax highlighting, `$$…$$` equations (rendered by KaTeX, which loads only on pages that contain math), tables, figures with captions, footnotes and task lists. Unfinished posts can live in `_drafts/`; they are never published. Put images in `assets/img/posts/`.
 
 ## Editing the homepage
 
@@ -36,7 +36,7 @@ Requires Ruby 3.x or newer (`brew install ruby`).
 bundle config set --local path vendor/bundle
 bundle install
 bundle exec jekyll serve --livereload            # http://localhost:4000
-bundle exec jekyll serve --livereload --drafts   # also renders _drafts/ (local only)
+bundle exec jekyll serve --livereload --drafts   # also renders _drafts/, if any (local only)
 ```
 
 Production check (what CI runs):

@@ -4,7 +4,7 @@ description: "Every element a technical post can use, in one place."
 tags: [Meta]
 ---
 
-Copy this file to `_posts/YYYY-MM-DD-your-title.md` and replace the content. Text can be **bold**, *italic*, `inline code`, a [link](https://jekyllrb.com) or a footnote.[^1]
+Reference only (the `docs/` folder is never built). Copy this file to `_posts/YYYY-MM-DD-your-title.md` to preview it, then delete the copy. Text can be **bold**, *italic*, `inline code`, a [link](https://jekyllrb.com) or a footnote.[^1]
 
 ## Equations
 

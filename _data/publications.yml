@@ -1,27 +1,35 @@
-# A curated starter selection; we can revise this list together.
-# Titles/venues/links checked against Nature Portfolio publisher pages.
-- year: 2026
-  title: "Wearable-sensor based walking and non-walking measures as progression markers in early to mid-stage Parkinson’s disease"
+# Selected peer-reviewed papers in Nature Portfolio journals.
+# Every entry was checked against the publisher page (citation_* metadata) and
+# Google Scholar on 2026-11-17. Author strings are abbreviated; "K.C. Ho" is bolded.
+# Display order = order in this file.
+
+- title: "Wearable-sensor based walking and non-walking measures as progression markers in early to mid-stage Parkinson’s disease"
+  authors: "K.C. Ho, S. Li, C. Serrano-Amenos, N. Kowahl, et al. (14 authors)"
   venue: "npj Parkinson's Disease"
+  year: 2026
   note: "First author"
   url: "https://www.nature.com/articles/s41531-026-01358-z"
 
-- year: 2026
-  title: "Interpretable and granular video-based quantification of motor characteristics from the finger-tapping test in Parkinson’s disease"
+- title: "Interpretable and granular video-based quantification of motor characteristics from the finger-tapping test in Parkinson’s disease"
+  authors: "T. Zarrat Ehsan, M. Tangermann, Y. Güçlütürk, S. Shin, K.C. Ho, et al. (7 authors)"
   venue: "npj Parkinson's Disease"
+  year: 2026
   url: "https://www.nature.com/articles/s41531-026-01307-w"
 
-- year: 2025
-  title: "Optimizing wrist-worn wearable compliance with insights from two Parkinson’s disease cohort studies"
+- title: "Optimizing wrist-worn wearable compliance with insights from two Parkinson’s disease cohort studies"
+  authors: "M.J. Meinders, L. Heathers, K.C. Ho, L. Russell, et al. (8 authors)"
   venue: "npj Parkinson's Disease"
+  year: 2025
   url: "https://www.nature.com/articles/s41531-025-01016-w"
 
-- year: 2023
-  title: "Analytical and clinical validity of wearable, multi-sensor technology for assessment of motor function in patients with Parkinson’s disease in Japan"
+- title: "Analytical and clinical validity of wearable, multi-sensor technology for assessment of motor function in patients with Parkinson’s disease in Japan"
+  authors: "G. Oyama, M. Burq, T. Hatano, W.J. Marks, et al., K.C. Ho, et al. (28 authors)"
   venue: "Scientific Reports"
+  year: 2023
   url: "https://www.nature.com/articles/s41598-023-29382-6"
 
-- year: 2022
-  title: "Virtual exam for Parkinson’s disease enables frequent and reliable remote measurements of motor function"
+- title: "Virtual exam for Parkinson’s disease enables frequent and reliable remote measurements of motor function"
+  authors: "M. Burq, E. Rainaldi, K.C. Ho, C. Chen, et al. (10 authors)"
   venue: "npj Digital Medicine"
+  year: 2022
   url: "https://www.nature.com/articles/s41746-022-00607-8"

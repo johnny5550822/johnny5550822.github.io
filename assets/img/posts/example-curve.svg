@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-labelledby="t">
+  <title id="t">Example: validation loss falling over training steps</title>
+  <rect width="640" height="300" fill="#ffffff"/>
+  <g stroke="#e5e5e2"><path d="M60 40H610M60 100H610M60 160H610M60 220H610"/></g>
+  <path d="M60 260H610M60 260V30" stroke="#8a8a86" fill="none"/>
+  <path d="M60 60 C140 150 200 190 300 210 S500 232 610 236" stroke="#2f5bd3" stroke-width="3" fill="none"/>
+  <g font-family="system-ui, sans-serif" font-size="13" fill="#5f5f5b">
+    <text x="335" y="290" text-anchor="middle">training steps</text>
+    <text x="20" y="150" transform="rotate(-90 20 150)" text-anchor="middle">loss</text>
+  </g>
+</svg>

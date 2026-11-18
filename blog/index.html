@@ -2,23 +2,19 @@
 layout: default
 title: Blog
 permalink: /blog/
-description: "Research notes, experiments, side projects, and writing by King Chung (Johnny) Ho."
+description: "Technical writing by King Chung (Johnny) Ho: research notes, experiments and side projects."
 ---
-<section class="blog-intro">
-  <p class="section-kicker">NOTES / EXPERIMENTS / SIDE PROJECTS</p>
-  <h1>Writing<span class="headline-accent">.</span></h1>
-  <p>Research notes, ideas, experiments, and things I learn while building.</p>
+<header class="page-header">
+  <h1>Blog</h1>
+  <p>Research notes, experiments and side projects.</p>
+</header>
+{%- assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{%- for year in years %}
+<section class="year" aria-labelledby="y{{ year.name }}">
+  <h2 id="y{{ year.name }}">{{ year.name }}</h2>
+  {% include post-list.html posts=year.items date_format='%b %-d' %}
 </section>
-{% assign published_posts = site.posts | where: 'site_post', true %}
-<section class="blog-listing" aria-label="Blog posts">
-  <div class="listing-label"><span>ALL POSTS</span><span>{{ published_posts.size }} {% if published_posts.size == 1 %}POST{% else %}POSTS{% endif %}</span></div>
-  <div class="post-list">
-  {% for post in published_posts %}
-    <a class="post-row" href="{{ post.url | relative_url }}">
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time>
-      <span class="post-row-main"><strong>{{ post.title | escape }}</strong>{% if post.description %}<span>{{ post.description | escape }}</span>{% endif %}</span>
-      <span class="item-arrow" aria-hidden="true">↗</span>
-    </a>
-  {% endfor %}
-  </div>
-</section>
+{%- else %}
+<p>No posts yet.</p>
+{%- endfor %}
+<p class="feed-hint"><a href="{{ '/feed.xml' | relative_url }}">{% include icons.html name="rss" %}<span>Subscribe via RSS</span></a></p>

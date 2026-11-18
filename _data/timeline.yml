@@ -1,21 +1,18 @@
-# Edit these short entries to refine the homepage timeline.
-# Keep dates and descriptions factual; the order shown here is the display order.
-- period: "2026 — now"
-  title: "Senior Principal AI/ML Engineer"
+# Career timeline, newest first. Display order = order in this file.
+# Only facts verifiable from public sources on 2026-11-17 are filled in:
+#   - Edwards Lifesciences (current, Irvine CA): public LinkedIn top card. Title/start date hidden publicly.
+#   - Verily: Google Scholar affiliation "Data Scientist @ Verily"; Verily-affiliated papers 2022–2026. Dates hidden publicly.
+#   - UCLA 2013–2019: LinkedIn education dates; 2019 UCLA dissertation on Google Scholar.
+# TODO(Johnny): add exact titles and dates from your LinkedIn (title/period fields are free text).
+- period: "Now"
   organization: "Edwards Lifesciences"
-  description: "Building applied AI systems for healthcare and medical imaging."
 
 - period: "Previously"
-  title: "AI and digital health research"
+  title: "Data Scientist"
   organization: "Verily"
-  description: "Worked on machine learning and digital biomarkers, including wearable measures for Parkinson's disease."
+  description: "Digital measures of Parkinson's disease from wearable sensors and remote assessments, with academic and clinical partners in the US, Europe and Japan."
 
-- period: "2013 — 2019"
+- period: "2013 – 2019"
   title: "Ph.D."
   organization: "University of California, Los Angeles"
-  description: "Doctoral research at the intersection of imaging informatics and machine learning."
-
-- period: "Ongoing"
-  title: "Independent research & side projects"
-  organization: "Team LittleStar"
-  description: "Exploring reinforcement learning, search, and opponent modeling through competitive Pokémon agents."
+  description: "Medical Imaging Informatics, advised by Corey Arnold. Dissertation: machine learning and deep learning for classifying acute ischemic stroke outcomes from imaging."

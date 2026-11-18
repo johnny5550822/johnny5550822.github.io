@@ -1,101 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfbfa">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111214">
+  <script>
+  // Set the colour theme before first paint: saved choice, else the OS setting.
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem("theme"); } catch (e) {}
+    var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+  })();
+</script>
 
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Begin Jekyll SEO tag v2.9.1 -->
+<title>King Chung (Johnny) Ho | Machine learning research &amp; engineering</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="King Chung (Johnny) Ho" />
+<meta name="author" content="King Chung (Johnny) Ho" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="King Chung (Johnny) Ho, Ph.D.: machine learning researcher and engineer. Career timeline, selected publications and technical writing." />
+<meta name="twitter:description" property="og:description" content="King Chung (Johnny) Ho, Ph.D.: machine learning researcher and engineer. Career timeline, selected publications and technical writing." />
+<link rel="canonical" href="https://johnny5550822.github.io/" />
+<meta property="og:url" content="https://johnny5550822.github.io/" />
+<meta property="og:site_name" content="King Chung (Johnny) Ho" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="King Chung (Johnny) Ho" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"King Chung (Johnny) Ho"},"description":"King Chung (Johnny) Ho, Ph.D.: machine learning researcher and engineer. Career timeline, selected publications and technical writing.","headline":"King Chung (Johnny) Ho","name":"King Chung Ho","sameAs":["https://scholar.google.com/citations?user=7VJYOzUAAAAJ","https://www.linkedin.com/in/kingchungho","https://github.com/johnny5550822"],"url":"https://johnny5550822.github.io/"}</script>
+<!-- End Jekyll SEO tag -->
 
-  <title>
-    
-      Johnny Ho &middot; PhD candidate in imaging informatics
-    
-  </title>
-
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="/public/favicon.ico">
-  <link rel="alternate" type="application/atom+xml" title="Johnny Ho" href="/atom.xml">
-  <link rel="stylesheet" href="css/fontawesome-free-5.0.4/web-fonts-with-css/css/fontawesome.min.css">
-</head>
-
-
-  <body>
-
-    <div class="container content">
-      <header class="masthead">
-        <h3 class="masthead-title">
-          <a href="/" title="Home">Johnny Ho</a>
-          <small>PhD candidate in imaging informatics</small>
-          <small>[<a href="/public/resume.pdf">resume</a>]</small>
-        </h3>
-      </header>
-
-
-      <main>
-        <img src="/public/profile_pic.png" alt="Avatar">
-        <div class="posts">
+  <link type="application/atom+xml" rel="alternate" href="https://johnny5550822.github.io/feed.xml" title="King Chung (Johnny) Ho" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/site.css">
   
-  <article class="post">
-    <p>I am a PhD student in the <a href="http://www.mii.ucla.edu/">UCLA Medical Imaging Informatics</a>, advised by Professor <a href="http://www.mii.ucla.edu/people/cwarnold/">Corey Arnold</a>, and Professor <a href="http://www.mii.ucla.edu/people/buia/">Alex Bui</a>.</p>
-
-<p>I am passionate about machine learning and deep learning. I love exciting projects that involve: (1) thinking (i.e., develop algorithms), (2) implementation (i.e., programming in industry standard), and (3) meaning (i.e., the application that I am building have large impact to the company and the society)</p>
-
-<table>
-    <tr>
-        <th>
-            <a href="https://twitter.com/kingchungho">
-                <i class="fa fa-twitter"></i> Twitter
-            </a>
-        </th>
-        <th>
-            <a href="https://github.com/johnny5550822">
-                <i class="fa fa-github"></i> GitHub
-            </a>
-        </th>
-        <th>
-            <a href="https://linkedin.com/in/kingchungho">
-                <i class="fa fa-linkedin"></i> LinkedIn
-            </a>
-        </th>
-    </tr>
-</table>
-
-<hr />
-
-<h5 id="selected-presentations-and-publications">Selected Presentations and Publications</h5>
-<ul>
-  <li>Ho KC, et al. A deep learning approach for acute ischemic stroke tissue outcome prediction. 2018, in preparation</li>
-  <li>Li J, Speier W, Ho KC, et al. An EM-based semi-supervised deep learning approach for semantic segmentation of histopathological images from radical prostatectomies. 2018, in preparation</li>
-  <li>Ho KC, et al. Classifying Acute Ischemic Stroke Onset Time using Deep Imaging Features. In AMIA Annual
-Symposium Proceedings (Vol. 2017). <strong>Best student paper award</strong></li>
-  <li>Ho KC, et al. A Temporal Deep Learning Approach for MR Perfusion Parameter Estimation in Stroke. 23rd
-International Conference on Pattern Recognition. Cancun; 2016. <strong>Finalist on IBM best student paper award</strong></li>
-  <li>Ho KC, et al. Predicting Discharge Mortality after Acute Ischemic Stroke Using Balanced Data. In AMIA
-Annual Symposium Proceedings (Vol. 2014, p. 1787). <strong>Finalist on best student paper award</strong></li>
-  <li>Ho KC, et al. A Novel Bi-Input Convolutional Neural Network for Deconvolution-Free Estimation of Stroke
-MR Perfusion Parameters. 2016 Annual Meeting of the Radiological Society of North America. Chicago, IL; 2016. Oral
-presentation</li>
-  <li>Ho KC, et al. Predicting Acute Ischemic Stroke Tissue Fate using Deep Learning on Source Perfusion MRI
-International Stroke Conference (ISC) 2016. Poster presentation.</li>
-  <li>Sarma KV, Zhong X, Ho KC, et al. An Investigational Patch-based Convolutional Neural Network Model for the
-Detection of Clinically Significant Prostate Cancer using Multiparametric MRI. 2016 Annual Meeting of the
-Radiological Society of North America. Chicago, IL; 2016. Oral presentation</li>
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="/">Johnny Ho</a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="/" aria-current="page">About</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle theme">
+            <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.4 14.6A8.5 8.5 0 0 1 9.4 3.6a8.5 8.5 0 1 0 11 11z"/></svg>
+            <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
+          </button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="shell" tabindex="-1">
+<section class="intro" aria-labelledby="intro-name">
+  <h1 id="intro-name">King Chung (Johnny) Ho</h1>
+  <p class="intro-role">Machine learning researcher &amp; engineer</p>
+  <div class="intro-body">
+    <p>I work on machine learning for healthcare. I'm currently at <strong>Edwards Lifesciences</strong>. Before that I was at <strong>Verily</strong>, building digital measures of Parkinson's disease from wearable sensors and video. I earned my Ph.D. at <strong>UCLA</strong>, where I applied deep learning to medical imaging for acute ischemic stroke.</p>
+    <p>Outside work I build game-playing agents and write about what I learn along the way in the <a href="/blog/">blog</a>.</p>
+  </div>
+  <ul class="links" aria-label="Elsewhere">
+  <li><a href="https://scholar.google.com/citations?user=7VJYOzUAAAAJ&hl=en&oi=ao" rel="me noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm-6.5 9.62V16c0 1.66 2.91 3 6.5 3s6.5-1.34 6.5-3v-3.38L12 16.2l-6.5-3.58z"/></svg><span>Google Scholar</span></a></li>
+  <li><a href="https://www.linkedin.com/in/kingchungho" rel="me noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.83v1.54h.06c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.13V21h-4v-5.03c0-1.2-.02-2.74-1.67-2.74-1.67 0-1.93 1.3-1.93 2.65V21h-4V9.75z"/></svg><span>LinkedIn</span></a></li>
+  <li><a href="https://github.com/johnny5550822" rel="me noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg><span>GitHub</span></a></li>
+  <li><a href="mailto:johnny5550822@gmail.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 5.5h18v13H3z M3.5 6l8.5 7 8.5-7"/></svg><span>johnny5550822@gmail.com</span></a></li>
 </ul>
 
-  </article>
-  
-</div>
+</section>
 
+<section class="section" id="timeline" aria-labelledby="timeline-title">
+  <h2 id="timeline-title">Timeline</h2>
+  <ol class="timeline">
+    <li class="timeline-item">
+      <span class="timeline-period">Now</span>
+      <div class="timeline-body">
+        <h3><span class="timeline-org">Edwards Lifesciences</span></h3>
+        
+      </div>
+    </li>
+    <li class="timeline-item">
+      <span class="timeline-period">Previously</span>
+      <div class="timeline-body">
+        <h3>Data Scientist<span class="sep" aria-hidden="true"> · </span><span class="timeline-org">Verily</span></h3>
+        <p>Digital measures of Parkinson&#39;s disease from wearable sensors and remote assessments, with academic and clinical partners in the US, Europe and Japan.</p>
+      </div>
+    </li>
+    <li class="timeline-item">
+      <span class="timeline-period">2013 – 2019</span>
+      <div class="timeline-body">
+        <h3>Ph.D.<span class="sep" aria-hidden="true"> · </span><span class="timeline-org">University of California, Los Angeles</span></h3>
+        <p>Medical Imaging Informatics, advised by Corey Arnold. Dissertation: machine learning and deep learning for classifying acute ischemic stroke outcomes from imaging.</p>
+      </div>
+    </li>
+  </ol>
+</section>
 
-      </main>
+<section class="section" id="publications" aria-labelledby="publications-title">
+  <div class="section-head">
+    <h2 id="publications-title">Selected publications</h2>
+    <a class="section-more" href="https://scholar.google.com/citations?user=7VJYOzUAAAAJ&hl=en&oi=ao" rel="noopener">All on Google Scholar →</a>
+  </div>
+  <ol class="pubs">
+    <li class="pub">
+      <a class="pub-title" href="https://www.nature.com/articles/s41531-026-01358-z" rel="noopener">Wearable-sensor based walking and non-walking measures as progression markers in early to mid-stage Parkinson’s disease</a>
+      <p class="pub-authors"><strong>K.C. Ho</strong>, S. Li, C. Serrano-Amenos, N. Kowahl, et al. (14 authors)</p>
+      <p class="pub-venue"><em>npj Parkinson&#39;s Disease</em>, 2026 <span class="badge">First author</span></p>
+    </li>
+    <li class="pub">
+      <a class="pub-title" href="https://www.nature.com/articles/s41531-026-01307-w" rel="noopener">Interpretable and granular video-based quantification of motor characteristics from the finger-tapping test in Parkinson’s disease</a>
+      <p class="pub-authors">T. Zarrat Ehsan, M. Tangermann, Y. Güçlütürk, S. Shin, <strong>K.C. Ho</strong>, et al. (7 authors)</p>
+      <p class="pub-venue"><em>npj Parkinson&#39;s Disease</em>, 2026</p>
+    </li>
+    <li class="pub">
+      <a class="pub-title" href="https://www.nature.com/articles/s41531-025-01016-w" rel="noopener">Optimizing wrist-worn wearable compliance with insights from two Parkinson’s disease cohort studies</a>
+      <p class="pub-authors">M.J. Meinders, L. Heathers, <strong>K.C. Ho</strong>, L. Russell, et al. (8 authors)</p>
+      <p class="pub-venue"><em>npj Parkinson&#39;s Disease</em>, 2025</p>
+    </li>
+    <li class="pub">
+      <a class="pub-title" href="https://www.nature.com/articles/s41598-023-29382-6" rel="noopener">Analytical and clinical validity of wearable, multi-sensor technology for assessment of motor function in patients with Parkinson’s disease in Japan</a>
+      <p class="pub-authors">G. Oyama, M. Burq, T. Hatano, W.J. Marks, et al., <strong>K.C. Ho</strong>, et al. (28 authors)</p>
+      <p class="pub-venue"><em>Scientific Reports</em>, 2023</p>
+    </li>
+    <li class="pub">
+      <a class="pub-title" href="https://www.nature.com/articles/s41746-022-00607-8" rel="noopener">Virtual exam for Parkinson’s disease enables frequent and reliable remote measurements of motor function</a>
+      <p class="pub-authors">M. Burq, E. Rainaldi, <strong>K.C. Ho</strong>, C. Chen, et al. (10 authors)</p>
+      <p class="pub-venue"><em>npj Digital Medicine</em>, 2022</p>
+    </li>
+  </ol>
+</section>
+<section class="section" id="writing" aria-labelledby="writing-title">
+  <div class="section-head">
+    <h2 id="writing-title">Recent writing</h2>
+    <a class="section-more" href="/blog/">All posts →</a>
+  </div>
+  <ul class="post-list">
+  <li>
+    <time datetime="2026-11-15T00:00:00-08:00">Nov 15, 2026</time>
+    <a href="/blog/hello-world/">Hello world</a>
+  </li>
+</ul>
 
-      <footer class="footer">
-        <small>
-          &copy; <time datetime="2018-01-22T20:36:24-08:00">2018</time>. All rights reserved.
-        </small>
-      </footer>
+</section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>© 2026 King Chung (Johnny) Ho</span>
+      <a href="/feed.xml"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 17a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 10a11 11 0 0 1 11 11h-3a8 8 0 0 0-8-8v-3zm0-6a17 17 0 0 1 17 17h-3A14 14 0 0 0 3 7V4z"/></svg><span>RSS</span></a>
     </div>
-
-    
-  </body>
+  </footer>
+  <script src="/assets/js/site.js" defer></script>
+</body>
 </html>

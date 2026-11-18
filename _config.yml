@@ -1,26 +1,64 @@
+# Site identity -------------------------------------------------------------
 title: "King Chung (Johnny) Ho"
-description: "Applied machine learning, research, and notes on building intelligent systems."
+tagline: "Machine learning research & engineering"
+description: >-
+  King Chung (Johnny) Ho, Ph.D.: machine learning researcher and engineer.
+  Selected publications, career timeline and technical writing.
+lang: en_US
+timezone: America/Los_Angeles
+
+# When king.ai is live, change url to "https://king.ai" (see README).
 url: "https://johnny5550822.github.io"
 baseurl: ""
-lang: "en"
-timezone: "America/Los_Angeles"
+
+author:
+  name: "King Chung (Johnny) Ho"
+  email: "johnny5550822@gmail.com"
+
+links:
+  scholar: "https://scholar.google.com/citations?user=7VJYOzUAAAAJ&hl=en&oi=ao"
+  linkedin: "https://www.linkedin.com/in/kingchungho"
+  github: "https://github.com/johnny5550822"
+  email: "johnny5550822@gmail.com"
+
+# jekyll-seo-tag
+social:
+  name: "King Chung Ho"
+  links:
+    - "https://scholar.google.com/citations?user=7VJYOzUAAAAJ"
+    - "https://www.linkedin.com/in/kingchungho"
+    - "https://github.com/johnny5550822"
+
+# Build ---------------------------------------------------------------------
 markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  math_engine: mathjax   # emits \( \) / \[ \]; rendered client-side by KaTeX
+  syntax_highlighter: rouge
+  footnote_backlink: "↩︎"
+
 permalink: /blog/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+
 exclude:
   - README.md
   - LICENSE.md
-  - .sass-cache
-  - _site
-  - about.md
-  - atom.xml
-  - css
-  - styles.scss
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - scripts
+  - .github
   - public
-  - _posts/2016-01-03-introduction.md
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post

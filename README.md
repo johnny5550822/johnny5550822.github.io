@@ -1,66 +1,64 @@
-# Johnny's personal website
+# johnny5550822.github.io
 
-This is the source for **King Chung (Johnny) Ho's** minimalist research homepage and technical blog.
+Source for King Chung (Johnny) Ho's research homepage and technical blog. Built with Jekyll 4 and deployed to GitHub Pages by GitHub Actions.
 
-**Status:** redesign drafted on `site/modern-research-redesign` for review. The original site is preserved on `master` until this branch is merged.
+## Writing a post
 
-## Where everything lives
-
-- `index.html`: homepage (intro, timeline, selected publications, recent writing)
-- `blog/index.html`: chronological list of writing
-- `_posts/YYYY-MM-DD-title.md`: blog articles (Markdown)
-- `_data/timeline.yml`: homepage career/research timeline
-- `_data/publications.yml`: curated papers
-- `_layouts/`: common site shell and article template
-- `assets/css/site.css`: full responsive design, including dark mode
-- `_config.yml`: Jekyll metadata and canonical URL
-
-The project deliberately stays with **Jekyll**, since this existing GitHub Pages repository was already configured for it. No JS build chain, database, CMS, or paid hosting is required.
-
-## Writing a new post
-
-Create `_posts/2026-11-16-my-research-note.md` with:
+Add a Markdown file to `_posts/` named `YYYY-MM-DD-short-title.md`:
 
 ```md
 ---
 title: "My research note"
-date: 2026-11-16
-description: "A one-line summary"
-site_post: true
-tags:
-  - Reinforcement Learning
+description: "One-line summary (used on social cards and in search results)."
+tags: [Reinforcement learning]
 ---
 
-Your content in Markdown goes here. Use fenced code blocks and Markdown tables for technical posts.
+Markdown goes here.
 ```
 
-Only posts with `site_post: true` are listed. The previous 2016 Jekyll example post is excluded from the build via `_config.yml`.
+The post appears on `/blog/`, in "Recent writing" on the homepage, in `feed.xml` and in `sitemap.xml`. Its URL is `/blog/short-title/`.
+
+`_drafts/markdown-style-guide.md` shows every supported element: code with syntax highlighting, `$$…$$` equations (rendered by KaTeX, which loads only on pages that contain math), tables, figures with captions, footnotes and task lists. Drafts are never published. Put images in `assets/img/posts/`.
+
+## Editing the homepage
+
+- Intro text: `index.html`
+- Career timeline: `_data/timeline.yml`
+- Selected publications: `_data/publications.yml`
+- Links, name and site URL: `_config.yml`
+- Styles: `assets/css/site.css` (colours are CSS variables at the top; dark mode is `:root[data-theme="dark"]`)
 
 ## Local preview
 
-With Ruby/Jekyll installed:
+Requires Ruby 3.x or newer (`brew install ruby`).
 
 ```bash
-gem install bundler jekyll
-jekyll serve --livereload
+bundle config set --local path vendor/bundle
+bundle install
+bundle exec jekyll serve --livereload --drafts   # http://localhost:4000
 ```
 
-Then open http://localhost:4000/. If deploying using GitHub Pages, prefer its pinned Jekyll environment for parity.
+Production check (what CI runs):
 
-## Publishing (after approving the redesign)
+```bash
+JEKYLL_ENV=production bundle exec jekyll build
+bundle exec htmlproofer _site --disable-external
+```
 
-1. Merge the review PR into `master`.
-2. Check your GitHub plan and Pages eligibility. GitHub Pages is included for public repositories on Free; private repository Pages requires an eligible paid GitHub plan.
-3. In **Settings → Pages**, select **Deploy from a branch**, source `master` / `(root)`, unless you already have another publishing configuration to preserve.
-4. The initial canonical URL is https://johnny5550822.github.io/ .
-5. When `king.ai` is purchased, configure it under **Settings → Pages → Custom domain**, add the DNS records GitHub instructs, and update `url` in `_config.yml` to `https://king.ai`. Do not add a CNAME file before domain setup.
+## Deployment
 
-**Privacy note:** This repository contains legacy assets including an old `public/resume.pdf`. The new site excludes the `public/` folder from Jekyll publishing, but files and Git history would still be visible if the repository is made public. Audit or move legacy material before changing visibility.
+`.github/workflows/pages.yml` builds the site and checks its HTML and internal links on every pull request, then uploads the built site as a downloadable `site-preview` artifact. On a push to `master` it deploys to GitHub Pages.
 
-## Research & paper attribution
+One-time setup after merging: **Settings → Pages → Build and deployment → Source: GitHub Actions**. Pages on a **private** repository needs a paid GitHub plan, and the published site is public either way.
 
-Selected publication titles and links are stored as data so they can be refined without touching the UI. Citations link directly to Nature Portfolio publisher pages.
+## Custom domain (king.ai), when ready
 
-## Scope
+1. Set `url: "https://king.ai"` in `_config.yml`. Canonical URLs, the feed and the sitemap all follow it.
+2. Settings → Pages → Custom domain: `king.ai`. With the Actions source, no `CNAME` file is needed.
+3. At the registrar, add apex `A` records to 185.199.108.153, .109.153, .110.153 and .111.153 (and/or the AAAA equivalents), plus `www CNAME johnny5550822.github.io`. Check GitHub's current docs before doing this.
+4. Verify the domain under the account's Pages settings, then enable **Enforce HTTPS**.
 
-Only `Hello world` is a new public-facing post in this draft. Pokémon research posts remain future writing; no work-in-progress results or unpublished project internals are automatically published.
+## Notes
+
+- `public/` holds legacy files, including an old résumé. It is excluded from the build but remains in the Git history.
+- The previous Poole/Hyde site is preserved on `master` (and in its history) until this redesign is merged.

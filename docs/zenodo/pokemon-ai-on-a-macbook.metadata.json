@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "upload_type": "publication",
+    "publication_type": "other",
+    "title": "How I Trained a Competitive Pokémon AI Agent Using a MacBook in Less Than 2 Months! From Imitation Learning and Reinforcement Learning to Search: Reaching the Top 25 in Gen 9 OU on the Pokémon Showdown Simulator",
+    "creators": [
+      { "name": "Ho, King Chung (Johnny)" }
+    ],
+    "description": "<p>A first-person technical blog post from Team LittleStar describing how a compact (12.76M-parameter) Pokémon battle agent was built on a MacBook Pro M4 Pro and one small CPU server, coordinated with AI assistants (ChatGPT, Claude, Grok), and evaluated on the public Pokémon Showdown Gen 9 OU ladder.</p><p>The post covers three approaches: (I) distilling the 142.7M-parameter Kakuna agent into a small student with DAgger-style training and selecting a confirmed eight-team repertoire (Champion-8); (II) reinforcement learning with PPO against a curriculum of hard opponents; and (III) Gumbel search at decision time plus MuZero-style selective Reanalyse to distill searched decisions into successive networks (SD2). Before Showdown's October 20, 2026 bot opt-in matchmaking change, a Search(H8) agent was captured at rank #21 and an SD2-Search(SD2.3) agent finished a 107-game run at 79–28 (Elo 1867) and was captured at rank #22. Controlled results, limitations, and references are included.</p><p>This record archives version 1.0.0 of the post as published at the related URL.</p>",
+    "version": "1.0.0",
+    "language": "eng",
+    "publication_date": "2026-11-21",
+    "access_right": "open",
+    "license": "cc-by-4.0",
+    "keywords": [
+      "reinforcement learning",
+      "imitation learning",
+      "knowledge distillation",
+      "Monte Carlo tree search",
+      "Gumbel search",
+      "MuZero Reanalyse",
+      "Pokémon Showdown",
+      "game AI"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://johnny5550822.github.io/blog/pokemon-ai-on-a-macbook/",
+        "relation": "isIdenticalTo",
+        "resource_type": "publication-other"
+      }
+    ],
+    "notes": "Text and original figures © King Chung (Johnny) Ho, licensed CC BY 4.0. Pokémon Showdown screenshots and Pokémon sprites are third-party material, included for commentary and not covered by this license. Pokémon is a trademark of Nintendo, Creatures and GAME FREAK; no affiliation or endorsement is implied."
+  }
+}

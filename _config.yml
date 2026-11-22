@@ -21,6 +21,12 @@ links:
   github: "https://github.com/johnny5550822"
   email: "johnny5550822@gmail.com"
 
+# Analytics ------------------------------------------------------------------
+# GoatCounter site code (the "CODE" in https://CODE.goatcounter.com). Empty = off.
+# The script is only emitted in production builds (JEKYLL_ENV=production), so
+# local previews are never counted. No cookies; no consent banner needed.
+goatcounter: ""
+
 # jekyll-seo-tag
 social:
   name: "King Chung Ho"

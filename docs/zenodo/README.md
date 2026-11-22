@@ -1,5 +1,7 @@
 # Archiving a post on Zenodo (DOI)
 
+> **Status (2026-11-21):** DOI **10.5281/zenodo.24435628** is reserved for the LittleStar Pokémon post and is already in the post (front matter, `citation_doi`, BibTeX). The final PDF is `littlestar-pokemon-ai-blog-v1.0.0.pdf` in this folder. Steps 3–5 below are done; what remains is steps 6–7, which Johnny does on Zenodo.
+
 A Zenodo DOI gives a post a permanent, citable identifier. Google Scholar and Semantic Scholar track citations to DOIs much
 better than to bare URLs. `docs/` is excluded from the build, so nothing here is published on the site.
 

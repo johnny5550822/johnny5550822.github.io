@@ -25,7 +25,7 @@ links:
 # GoatCounter site code (the "CODE" in https://CODE.goatcounter.com). Empty = off.
 # The script is only emitted in production builds (JEKYLL_ENV=production), so
 # local previews are never counted. No cookies; no consent banner needed.
-goatcounter: ""
+goatcounter: "johnny5550822"
 
 # jekyll-seo-tag
 social:

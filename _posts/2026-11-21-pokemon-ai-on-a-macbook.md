@@ -2,6 +2,7 @@
 title: "How I Trained a Competitive Pokémon AI Agent Using a MacBook in Less Than 2 Months!"
 description: "From Imitation Learning and Reinforcement Learning to Search: Reaching the Top 25 in Gen 9 OU on the Pokémon Showdown Simulator"
 tags: [Reinforcement learning, Search, Pokémon]
+doi: "10.5281/zenodo.24435628"
 ---
 
 ---
@@ -20,7 +21,7 @@ tags: [Reinforcement learning, Search, Pokémon]
 - [The ending is also the beginning](#the-ending-is-also-the-beginning)
 - [References](#references)
 
-> **If you find this useful, please cite it.** I plan to open-source the LittleStar code soon and to write up the methods as a paper. Until then, if this post or its methods help your work, please cite this blog post (a BibTeX entry is at [the end](#the-ending-is-also-the-beginning)). Once the paper is out, please cite the paper.
+> **If you find this useful, please cite it.** I plan to open-source the LittleStar code soon and to write up the methods as a paper. Until then, if this post or its methods help your work, please cite this blog post (DOI: [10.5281/zenodo.24435628](https://doi.org/10.5281/zenodo.24435628); a BibTeX entry is at [the end](#the-ending-is-also-the-beginning)). Once the paper is out, please cite the paper.
 
 ---
 
@@ -584,6 +585,7 @@ The research continued after October 20, with stronger search, opponent modeling
   title        = {How I Trained a Competitive Pok{\'e}mon {AI} Agent Using a {MacBook} in Less Than 2 Months! From Imitation Learning and Reinforcement Learning to Search, Reaching the Top 25 in Gen 9 {OU} on the Pok{\'e}mon Showdown Simulator},
   year         = {2026},
   month        = nov,
+  doi          = {10.5281/zenodo.24435628},
   howpublished = {Blog post, \url{https://johnny5550822.github.io/blog/pokemon-ai-on-a-macbook/}},
   note         = {Team LittleStar}
 }

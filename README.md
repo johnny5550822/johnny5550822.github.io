@@ -20,6 +20,17 @@ The post appears on `/blog/`, in "Recent writing" on the homepage, in `feed.xml`
 
 `docs/markdown-style-guide.md` (reference only, never built) shows every supported element: code with syntax highlighting, `$$…$$` equations (rendered by KaTeX, which loads only on pages that contain math), tables, figures with captions, footnotes and task lists. Unfinished posts can live in `_drafts/`; they are never published. Put images in `assets/img/posts/`.
 
+## Analytics (GoatCounter)
+
+Privacy-friendly page-view counts (no cookies, no consent banner). Set `goatcounter: "CODE"` in `_config.yml`, where `CODE` is
+your site code from <https://CODE.goatcounter.com>. The script loads only in production builds, so local previews are not
+counted. Dashboard: `https://CODE.goatcounter.com` (views per page, referrers, countries, browsers).
+
+## DOIs and citation metadata
+
+Posts emit Google Scholar citation tags (title, author, date, URL). Add `doi: 10.5281/zenodo.NNNNNNN` to a post's front matter
+to show a DOI link under the title and emit `citation_doi`. To get a DOI, see `docs/zenodo/README.md`.
+
 ## Editing the homepage
 
 - Intro, quote and photo: `index.html` (photo: `assets/img/profile.webp`)

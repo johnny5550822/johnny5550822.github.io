@@ -9,9 +9,11 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: '%B %-d, %Y' }}</time>
       <span aria-hidden="true">·</span> {{ minutes }} min read
       {%- if page.tags.size > 0 %} <span aria-hidden="true">·</span> {{ page.tags | join: ', ' }}{% endif %}
+      {%- if page.doi %} <span aria-hidden="true">·</span> DOI <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>{% endif %}
     </p>
     <h1 itemprop="headline">{{ page.title | escape }}</h1>
     {% if page.description %}<p class="post-deck">{{ page.description | escape }}</p>{% endif %}
+    <p class="post-byline">By <span itemprop="author">{{ page.author | default: site.author.name }}</span></p>
   </header>
   <div class="prose" itemprop="articleBody">
 {{ content }}
